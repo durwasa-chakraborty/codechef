@@ -19,7 +19,6 @@ int main(int argc, char const *argv[])
         qsort(pie,number,sizeof(int),compare);       
         qsort(rack,number,sizeof(int),compare);
         int j=0,count=0;
-        printf("<<<<<testing>>>>> pie %d<<<<<<testing>>>>>> %d \n",pie[0],rack[0]);
         for(i=0;i<number;i++)
         {
             if(pie[j]<=rack[i])
