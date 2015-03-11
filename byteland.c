@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define gc getchar_unlocked
-
 int compare(void const *, void const*);
 static  long int get_i()
 {
@@ -53,4 +52,3 @@ int compare(void const *p,void const *q)
 {
     return  (*(int*)p-*(int*)q);
 }
-
