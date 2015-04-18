@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 int compare(void const *, void const*);
 int main(int argc, char const *argv[])
 {
     int i=0,n,p=0;
     scanf("%d",&n);
-    int a[n];    
+    int a[n];
+    printf("%d\n", );   
     while(n--)
     {
         scanf("%d",&a[i]);
