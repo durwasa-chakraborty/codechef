@@ -6,8 +6,7 @@ int main(int argc, char const *argv[])
 {
     int i=0,n,p=0;
     scanf("%d",&n);
-    int a[n];
-    printf("%d\n", );   
+    int a[n];  
     while(n--)
     {
         scanf("%d",&a[i]);

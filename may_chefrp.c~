@@ -1,0 +1,60 @@
+/*
+    author :: Durwasa Chakraborty
+    programming language :: C
+    programming organization :: Codechef
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define gc getchar_unlocked
+int compare(void const *, void const *);
+int get_i() {
+  char c = gc();
+  while(c<'0' || c>'9') c = gc();
+  int ret = 0;
+  while(c>='0' && c<='9') {
+    ret = 10 * ret + c - 48;
+    c = gc();
+  }
+  return ret;
+}
+int main(int argc, char const *argv[])
+{
+	int t = get_i();
+	int i=0;
+	while(t--)
+	{
+		int n = get_i();
+		int a[n];
+		for(i=1;i<=n;i++)
+			a[i]=get_i();
+        printf("%d\n",solution(a,n));
+	}
+	return 0;
+}
+
+int compare(void const *p,void const *q)
+{
+    return *(int *)p-*(int *)q;
+}
+int solution(int *a,int n)
+{
+	int count=0;
+	int i=1;
+
+	for(i=1;i<n;i++)
+	{
+		if(a[i]>=2)
+			count+=a[i];
+		else
+		{
+			count = -1;
+			break;
+		}
+	
+	}
+	if(n==i)
+		count=(a[n]>=2)?count+2:-1;
+	return count;
+}
+
